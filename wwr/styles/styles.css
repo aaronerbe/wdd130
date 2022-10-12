@@ -5,6 +5,14 @@
   --accent2-color: #DE541E;
 */
 
+/* Fonts are Architects Daughter, Bree Serif, Poppins, Rock Salt, Waiting for the Sunrise*/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bree+Serif&family=Poppins&family=Rock+Salt&family=Waiting+for+the+Sunrise&display=swap');
+/* 
+--heading-font: "Bree Serif";
+  --paragraph-font: Poppins, Helvetica, sans-serif;
+*/
+
+/*************************CENTERING & MARGINS**************************************/
 #content{
     max-width: 1600px;
     margin: 0 auto;
@@ -13,52 +21,138 @@
 nav, a, #hero-msg h1, #hero-msg h4, .button-box, main section {
     text-align: center;
 }
-/*setting huge margin for messaging*/
-#background {
-    height: 725px;
-}
 
-/*set colors and decorations and fonts*/
+/************************COLORS & DECORATIONS & FONTS*******************************/
 body{
     background-color: #3F3F37;
+    font-family: "Poppins", Helvetica, Sans-Serif;  /*general paragraph text*/
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
+
+/***********HEADER SECTION***********/
 header{
     background-color: #D6D6B1;
 }
+/***TOP LEFT LOGO****/
+#logo_link{
+    padding-top: 5px;
+}
+.logo{
+    width: 80px;
+}
+/****navigation bar****/
 nav a{
     color: black;
     text-decoration: none;
+    font-family: "Bree Serif", Helvetica, sans-serif;
+    padding: 35px;
 }
-.home-title, h4{
+
+/**********HERO BOX***********************/
+#hero-box img{
+    width: 100%;
+}
+/*********TITLE & SUBTITLE****************/
+.home-title{
+    font-size: 2em;
     color: #D6D6B1;
+    font-family: "Architects Daughter", Helvetica, sans-serif;
+    margin-top: 10px;
 }
-.book, .join, footer a, footer p{
-    /*background-color: #D6D6B1;*/
+h4{
+    color: #D6D6B1;
+    font-family: "Architects Daughter", Helvetica, sans-serif;
+}
+
+/**********MAIN SECTION***************/
+main section img{
+    box-sizing: border-box;
+}
+
+/***********BOOK NOW ****************/
+/*****JOIN NOW (After Images)***/
+.book, .join{  
+    font-size: 18px;
+    color: #D6D6B1;
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 5px;
+    background-color: #DE541E
+}
+
+/***********PICS & ICONS & SUBTITLES (h2)*******/
+.rivers-card, .camping-card, .rapids-card{
+    margin: 200px 0;
+}
+.card-img{
+    border: 10px solid black;
+}
+.icon{
+    width: 80px;
+    padding-top: 10px;
+}
+h2{
+    margin: 0;
+}
+
+
+
+
+/**********EMPTY BACKGROUND DIV??***********/
+#background {
+    background-color: #D6D6B1;
+    height: 725px;  /*setting huge margin for messaging*/
+}
+
+.mountains{
+    /******10/11 - ADDDING THIS INDEPENDENT OF ASSIGNMENT TO MATCH VISUAL EXPECATATION GIVEN******/
+    margin: 150px 0;
+}
+
+/**************MESSAGE 'more than the thrill' SECTION******/
+.msg{
+    line-height: 1.5em;
+    padding: 35px;
+}
+.msg h2{
+    color: white;
+    font-family: "Poppins", Helvetica, Sans-Serif;
+}
+.msg p{
+    color: white;
+    font-family: "Poppins", Helvetica, Sans-Serif;
+    font-size: 0.8em;
+    padding-bottom: 15px;
+}
+
+/***********FOOTER CONTENT*************/
+footer{
+    padding: 25px 50px;
+}
+footer a{
     color: #D6D6B1;
     text-decoration: none;
 }
-nav a:hover, .book:hover, .join:hover, footer a:hover{
-    background-color: #DE541E;
+footer p{
     color: #D6D6B1;
+    text-decoration: none;
+    font-size: 1.2em;
+    font-family: "Poppins", Helvetica, Sans-Serif;
+}
+footer .social img{
+    padding-top: 15px;
+}
+
+
+/*****************************HOVER BEHAVIOR******************************************/
+nav a:hover, .book:hover, .join:hover, footer a:hover{
+    background-color: #D6D6B1;
+    color: #DE541E;
+    font-weight: bolder;
     text-decoration: underline;
 }
-#background {
-    background-color: #D6D6B1;
-}
-.msg h2, .msg p{
-    color: white;
-}
-footer p{
-    font-size: 1.2em;
-}
 
-
-/*set some widths*/
-.logo, .icon{
-    width: 80px;
-}
-/*assignment called this hero-img*/
-#hero-box{
-    width: 100%;
-}
 
