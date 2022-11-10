@@ -11,6 +11,7 @@
 --heading-font: "Bree Serif";
   --paragraph-font: Poppins, Helvetica, sans-serif;
 */
+/* *********************************************************MAIN PAGE (INDEX) ******************************************************* */
 
 /*************************CENTERING & MARGINS**************************************/
 #content{
@@ -209,6 +210,154 @@ nav a:hover, .book:hover, .join:hover, footer p a:hover{
     transform: scale(1.1);
 }
 
+
+
+/******************************************************* RIVERS PAGE ***********************************************/
+
+/*centering these*/
+#river-msg h1 {
+    text-align: center;
+}
+
+/* RIVER TOP BOX */
+#river-top{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+#river-box{
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+#river-box img{
+    width: 100%;
+    margin-top: -400px;
+    margin-bottom: -10px;
+}
+#river-msg{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 100px;
+}
+#river-msg h1{
+    color: black;
+}
+
+/* RIVERS SUB HEADING */
+.rivers-sub-heading{
+    background-color: #D6D6B1;
+    text-align: center;
+    height: 300px; 
+    /* to align veritically use line-height and make same heigt as height setting */
+    line-height: 300px;
+    margin-bottom: -100px;
+}
+.rivers-sub-heading h4{
+    color: black;
+    font-size: 50px;
+    margin: 0;    
+    
+}
+
+/* RIVERS GRID */
+.rivers-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 100px 470px 100px 470px 100px 470px 100px;
+}
+/* background */
+.rivers-background{
+    grid-column: 1/3;
+    grid-row: 1/8;
+    z-index: -2;
+
+    background-color: #D6D6B1;
+    height: auto;  /*setting huge margin for messaging*/
+    width: auto;
+
+}
+/* cols */
+.river1-img, .river2-img, .river3-img{
+    /* display: block; */
+    grid-column: 1/2;
+    display: flex;
+    margin-right: -75px;
+    justify-content: center;
+    align-items: center;
+    transition: transform .05s;
+}
+.river1-img img, .river2-img img, .river3-img img{
+    height: 470px;
+    width: 700px;
+    box-shadow: 5px 5px 10px #6f7364;
+}
+.river1-about, .river2-about, .river3-about{
+    grid-column: 2/3;
+    z-index: 1;
+    padding: 40px;
+    width: 640px;
+    height: auto;
+    overflow: hidden;
+    margin-left: 20px;
+}
+.river1-button, .river2-button, .river3-button{
+    grid-column: 2/3;
+    z-index: 2;
+    position: relative;
+}
+.river1-box, .river2-box, .river3-box{
+    grid-column: 2/3;
+    z-index: -1;   
+    height: auto;
+    width: 700px;
+    background-color: grey;
+    box-shadow: 5px 5px 10px #6f7364;
+    margin-left: 20px;
+    transition: transform .05s;
+}
+/* rows */
+.river1-img, .river1-about, .river1-box, .river1-button{
+    grid-row: 2/3;
+}
+.river2-img, .river2-about, .river2-box, .river2-button{
+    grid-row: 4/5;
+    /* overflow: hidden; */
+}
+.river3-img, .river3-about, .river3-box, .river3-button{
+    grid-row: 6/7;
+}
+
+/* Learn More Buttons*/
+.more{  
+    font-size: 18px;
+    color: #D6D6B1;
+    /* color: white; */
+    /* color: black; */
+    /* color: #3F3F37; */
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-top: 50px;
+    border-radius: 10px;
+    /* background-color: #DE541E;*/
+     background-color: #3F3F37;
+     position: absolute;
+     left: 60px;
+     bottom: 40px;
+}
+/* Hover Behaviors */
+.river1-img:hover, .river2-img:hover, .river3-img:hover
+{
+    /* opacity: .6; */
+    transform: scale(1.01);
+}
+.more:hover{
+    background-color: #D6D6B1;
+    color: black;
+    font-weight: bolder;
+    text-decoration: underline;
+}
+
 /* @Media Query - Don't add css after this section */
 @media screen and (max-width: 900px) {
     #hero, .home-grid {
@@ -251,3 +400,4 @@ nav a:hover, .book:hover, .join:hover, footer p a:hover{
         margin-top: 25px;
     }
 }
+
