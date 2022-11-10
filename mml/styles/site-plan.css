@@ -178,6 +178,11 @@ nav a:hover {
   border-right: 1px solid;
 }
 
-
+img{
+  padding: 10px;
+}
+.wireframes img{
+  width: 400px;
+}
 
 
