@@ -46,6 +46,22 @@ nav a:hover, footer a:hover{
   color: #E3B23C;
   border-color: white;
 }
+.filter-buttons a:hover, .load-more:hover{
+  background-color: #232c33;
+  color:#E3B23C;
+  border-color: #232c33;
+}
+.blogs img:hover{
+  opacity: .9;
+  transform: scale(1.05);
+  transition: transform .5s;
+
+}
+
+.home-mailing-list img:hover{
+  /* opacity: 1;
+  transform: scale(1.3); */
+}
 
 /* HEADER SECTION */
 header{
@@ -141,21 +157,27 @@ hr{
 .home-mailing-list img{
   width: 500px; 
   z-index: -1;
+  /* opacity: 5.0; */
+  transition: transform .5s;
+
 }
+
 .home-mailing-list h3{
-  color: #E3B23C;
+  color: #232c33;
   z-index: 1;
   position: absolute;
-  top: 38%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Architects Daughter", "Helvetica", sans-serif;
+  font-weight: bolder;
+  font-size: 30px;
 }
 .home-mailing-list p{
   color: white;
   z-index: 1;
   position: absolute;
-  top: 55%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -253,32 +275,38 @@ footer{
   font-family: "Bree Serif", Helvetica, sans-serif;
 }
 .blogs{
-  grid-column: span 2/4;
-  display: flex;
-  justify-content: space-evenly;
+  grid-column: 2/4;
+  display: grid;
+  grid-template-columns: 1fr 300px 1fr 300px 1fr 300px 1fr;
   padding-top: 80px;
-  text-align: center;
   padding-bottom: 80px;
+  text-align: center;
   background-color: #232c33;
 }
-.blog-img{
-  width: 300px;
-  /* padding-bottom: 20px; */
-  margin-bottom: 30px;
-  border-width: 1px;
-  border-color: #E3B23C;
-  border-style: solid;
+.blog1{
+  grid-column: span 1/3;
+}
+.blog2{
+  grid-column: span 1/5;
+}
+.blog3{
+  grid-column: span 1/7;
 }
 .blogs a{
   font-size: 20px;
   font-family: "Bree Serif", Helvetica, sans-serif;
   text-decoration: none;
   color: white;
-  padding: 20px;
+  padding: 10px;
   padding-top: 80px;
 }
-
-
+.blog-img{
+  width: 280px;
+  margin-bottom: 30px;
+  border-width: 1px;
+  border-color: #E3B23C;
+  border-style: solid;
+}
 .load-more{
   grid-column: span 2/4;
   display: flex;    
@@ -294,6 +322,7 @@ footer{
   font-family: "Bree Serif", Helvetica, sans-serif;
   margin-top: 80px;
   margin-bottom: 80px;
+  background-color: white;
 }
 
 
@@ -322,17 +351,21 @@ footer{
   text-align: left;
 }
 .about-us-grid img{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   /* margin: 40px; */
   margin-top: 40px;
   margin-bottom: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
 /* CONTACT US */
 .contactform{
   padding-top: 200px;
-  background-color: #232c33;
+  /* background-color: #232c33; */
   padding-bottom: 25px;
 }
 form {
@@ -341,32 +374,26 @@ form {
   /* margin-top: 150px; */
   margin-bottom: 150px;
   width: 400px;
-  /* Form outline */
-  padding: 1em;
-  border: 1px solid #ccc;
-  border-radius: 1em;
+  padding: 2em;
   font: 1em;
   font-family: "Bree Serif", Helvetica, sans-serif;
-  background-color: #EDEBD7;
+  background-color: #232c33;
   color: #232c33;
+  color: white;
+  /* Form outline */
+  border-color: black;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 1em;
 }
-/* --primary-color: #E3B23C   ;
---secondary-color: #EDEBD7 ;
---accent1-color: #232c33;
---accent2-color: #47682c;
-Not used but was part of the pallet - may switch to this??
---accent3-color: #993955;  */
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;  }
-
 form li + li {
   margin-top: 1em;
   /* margin-left: 1em; */
 }
-
 label {
   /* Uniform size & alignment */
   display: inline-block;
@@ -374,26 +401,20 @@ label {
   text-align: right;
 }
 
-input,
-textarea {
+input, textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
-
   /* Uniform text field size */
   width: 300px;
   box-sizing: border-box;
-
   /* Match form field borders */
   border: 1px solid #EDEBD7;
 }
-
-input:focus,
-textarea:focus {
+input:focus, textarea:focus {
   /* Additional highlight for focused elements */
   border-color: #000;
 }
-
 textarea {
   /* Align multiline text fields with their labels */
   vertical-align: top;
@@ -401,19 +422,15 @@ textarea {
   /* Provide space to type some text */
   height: 5em;
 }
-
 .button {
   /* Align buttons with the text fields */
   padding-left: 90px; /* same size as the label elements */
 }
-
 button {
   /* This extra margin represent roughly the same space as the space
      between the labels and their text fields */
   margin-left: 0.5em;
 }
-
-
 /* For the FORM Javascript */
 #feedback {
   background-color: #232c33;
@@ -432,9 +449,8 @@ button {
 }
 
 
-
 /* @Media Query - Don't add css after this section */
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1200px) {
   body{
     margin: 0;   /*UNDO STATIC HEADER*/
   }
@@ -456,7 +472,6 @@ button {
     border-style: hidden;
   }
   nav a{
-    /* padding-right: 50px; */
     margin-right: 50px;
   }
   #hero img{
@@ -465,15 +480,36 @@ button {
     border-style: solid;
     border-color: black;
   }
-  #hero, .home-grid {
+  #hero, .home-grid, .blog-grid, .about-us-grid{
     display: block;
     height: auto;
   } 
-  .home-hello{
+  .home-hello, .blog-grid, .about-us-grid{
     padding: 35px;
+  }
+  .blogs{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .blog1, .blog2, .blog3{
+    grid-column: span 1/3;
+  }
+  .blogs img{
+    margin-top: 40px;
+    margin-bottom: 0px;
   }
   .home-mailing-list img{
     width: 400px;
+  }
+  .about-us-grid img{
+    max-width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .about-us-grid p{
+    text-align: center;
   }
   .footer-links, footer .social{
     flex-direction: column;
