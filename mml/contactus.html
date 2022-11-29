@@ -16,11 +16,12 @@
             </a>
         </div>
         <!-- Lower Navigation Bar -->
-        <div class="nav-bar">
+        <div class="nav-bar" id="myTopnav">
             <nav>
+                <a href="index.html">Home</a>
                 <a href="blog.html">Blogs</a>
-                <a href="aboutus.html">About Us</a>
-                <a href="contactus.html">Contact Us</a>
+                <a href="aboutus.html">About</a>
+                <a href="contactus.html" class="active">Contact</a>
             </nav>
         </div>
     </header>
@@ -87,7 +88,7 @@
         // make the feedback element visible.
         feedbackElement.style.display = "block";
         // add a class to move everything down so our message doesn't cover it.
-        document.body.classList.toggle('moveDown');        
+        document.body.classList.toggle('moveDown');    
     });
 </script>
 </body>
