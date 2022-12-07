@@ -67,7 +67,7 @@ body{
 }
 .blogs img:hover{
   opacity: .9;
-  transform: scale(1.05);
+  transform: scale(1.07);
   transition: transform .5s;
 
 }
