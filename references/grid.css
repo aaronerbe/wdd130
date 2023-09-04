@@ -1,0 +1,135 @@
+/* http://cssgridgarden.com/ */
+/* https://css-tricks.com/wp-content/uploads/2022/02/css-grid-poster.png */
+
+
+/********   grid-column-START  grid-column-END  **********/
+
+#garden{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+/* starts at 1st grid line */
+/* ends at 4th grid line */
+
+#water{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+/* Invert direction.  Start at higher number than end */
+/* Goes from grid line 5 to grid line 2 */
+#water {
+    grid-column-start: 5;
+    grid-column-end: 2;
+}
+
+/* Negative numbers */
+/* counts backwards */
+/* starts at gridline 1 and counts backwards by -2 (stops on the 5th line) */
+#water{
+    grid-column-start: 1;
+    grid-column-end: -2;
+}
+
+/* starts at -3 (+4) */
+/* NOTE, unless defined, it only spans 1 grid */
+#water{
+    grid-column-start: -3;
+}
+
+/************************   SPAN  ************************/
+/* isntead of 'start' & 'end' use span */
+/* Span gives desired column width */
+/* only works with positive values */
+/* starts on 2nd grid line and spans 2 grids */
+#water{
+    grid-column-start: 2;
+    grid-column-end: span 2;
+}
+
+/* Use span with 'start' to site relative end point */
+/* starts on 3rd grid line, spands 3 grids */
+#water{
+    grid-column-start: span 3;
+}
+
+/****************  SHORTHAND START/END  ****************/
+/* starts on grid line 4.  ends on grid line 6 */
+#water{
+    grid-column: 4/6
+}
+
+/*Use SPAN with Shorthand  */
+/* span (span distance)/ending grid line */
+/* span 3 grids, ending on grid line 5 */
+#water{
+    grid-column: span 3/5;
+}
+/* start on grid lin 2, span 3 grids */
+#water{
+    grid-column: 2/span 3;
+}
+
+
+/****************  GRID-ROW-START  ****************/
+/* starts row at grid line 3 */
+/* NOTE, unless defined, it only spans 1 grid */
+#water{
+    grid-row-start: 3;
+}
+/* Shorthand for ROW is the same */
+/* starts row line 3, ends row line 6 */
+#water{
+    grid-row: 3/6;
+}
+
+/****************  SHORTHAND GRID-AREA  ****************/
+/* 4 values */
+/* row start, column start, row end, column end */
+/* spans starting at row line 1 to line 4 & col line 2 to line 6 */
+#water{
+    grid-area: 1/2/4/6;
+}
+
+/****************  REPEAT  ****************/
+/* Sets 8 grids 12.5% each */
+#garden {
+    display: grid;
+    grid-template-columns: repeat(8, 12.5%);
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+
+/*********  GRID-TEMPLATE-COLUMNS/ROW Inputs  ***********/
+/* 100px, 3em, 40% 1fr */
+#garden {
+    display: grid;
+    grid-template-columns: 100px 3em 40% 100px 3em 40%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+
+  /* fr = Fractional Unites */
+  /* Each fr allocates one share of the available space.  */
+  /* 1/6th 1st column, 5/6th 2nd column */
+  #garden {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+/* When px or ems is used with fr.  fr will use up the remainder of the space */
+/* 1st colmn = 50px, then 3 equal fractional columns, then 1 50px column */
+#garden {
+    display: grid;
+    grid-template-columns: 50px 1fr 1fr 1fr 50px;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+  }
+  
+/****************  SHORTHAND GRID-TEMPLATE  ****************/
+/* Combines Rows / Columns */
+/* row are 60% and 40% */
+/* columns are 200px and 1fr */
+#garden {
+    display: grid;
+    grid-template: 60% 40% / 200px 1fr
+  }

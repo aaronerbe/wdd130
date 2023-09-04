@@ -1,0 +1,25 @@
+/* IMAGE OPTIMIZATION */
+/* Google ranking will look at if your sites images are optimized */
+/* Use the below page to get a ranking of your webpage speeds */
+/* developers.google.com/speed/pagespeed/insights/ */
+
+
+/* RESIZING IMAGES */
+/* 
+Save original in a safe place 
+    Never need wider than a monitor.
+    A whole screen would be about 1000px wide
+    photoshop, paint, etc will work.
+
+    Use picresize.com
+        upload, set width (1000px max for full banner, etc)
+        resize
+        downloads with rsz prefix.  
+*/
+
+/* COMPRESSING THE IMAGE*/
+/* 
+    can use photoshop etc
+    use tinypng.com
+        make sure it still looks good and isn't over optimized (pixelated/grainy)
+*/

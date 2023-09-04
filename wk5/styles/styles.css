@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    background-color: rgb(115,115,115);
+}
+
+div{
+    background-color: rgb(115,115,115);
+    width: 100%;
+    text-align: center;
+}
+
+img{
+    width: 100%;
+}
+
+.circles {
+    max-width: 250px;
+    border-radius: 50%;
+    border-color: rgb(68,68,68);
+    border-width: 15px;
+    border-style: solid;
+    margin: 2% 6%;
+    
+}
+
+

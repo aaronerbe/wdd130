@@ -1,0 +1,31 @@
+/******************* BLOCKS *********************/
+/* BLOCK elements flow vertically down the page by default */
+/* BLOCK elements take up 100% of the width available */
+/* To align, we 1st have to set a width less than 100% */
+/* Then can set lef/right margin to auto (margin: 0 auto) */
+/* For rigth aligned: */
+    /* set just the left margin to auto (margin-left: auto) */
+/* BLOCKS are left aligned by default */
+/* PRACTICE HERE:  https://codepen.io/matkat/pen/EObyVY */
+/* https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements */
+
+/* address, article, aside, blockquote, details, diaolog, dd, dt, fieldset, figcaption, figure, footer, form, h1 - h6, header, hgroup, hr, li, main, nav, ol, p, pre, section, table, ul */
+
+/* PARAGRAPH ALIGNMENT */
+/* p is a block but we can align the text INSIDE of the block using text-align property */
+/* text-align on a p or h1 will affect everything inside that block */
+
+/* nth-of-type(1) */
+/* Counts the number of times a particular element is the child of another element */
+p:nth-of-type(1)  {/*first paragraph*/}
+p:nth-of-type(2)  {/*second paragraph*/}
+p:nth-of-type(3)  {/*third paragraph*/}
+/* can be combined with selector to be specific to a block */
+.block4 p:nth-of-type(1) {/*1st paragraph in block 4 */}
+
+
+
+/******************* INLINE *********************/
+/* INLINE elements flow horizontally across the page */
+
+
